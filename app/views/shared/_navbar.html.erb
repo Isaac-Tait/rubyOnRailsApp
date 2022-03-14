@@ -36,13 +36,23 @@
         <div class="hidden sm:block sm:ml-6">
           <div class="flex space-x-4">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="/" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</a>
+              <ul class='flex flex-row'>
+                <li class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">
+                  <%= link_to "Home", root_path %>
+                </li>
 
-            <a href="/about" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
+                <li class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">           
+                  <%= link_to "About", about_path %>
+                </li>
 
-            <a href="/contact" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                <li class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                  <%= link_to "Contact", contact_path %>
+                </li>
 
-            <a href="/calendar" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Calendar</a>
+                <li class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                  <%= link_to "Calendar", calendar_path %>
+                </li>
+              </ul>
           </div>
         </div>
       </div>
