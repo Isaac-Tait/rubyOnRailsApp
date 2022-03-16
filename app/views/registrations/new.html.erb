@@ -1,7 +1,22 @@
-<h1 class='h-96 w-full'>Sign Up</h1>
-
-<%= form_with model: @user, url: sign_up_path do |form| %>
-    <%= form.text_field :email %>
-    <%= form.text_field :password %>
-    <%= form.text_field :password_confirmation %>
-<% end %>
+<div class='w-full h-96'>
+<h1 class='font-semibold text-2xl'>Sign Up</h1>
+    <%= form_with model: @user, url: sign_up_path do |form| %>
+        <div class='flex justify-center'>
+            <div class='mx-2'>
+                <%= form.label :email %>
+                <%= form.text_field :email, placeholder: "youremailis@awesome.com" %>
+            </div>
+            <div class='mx-2'>
+                <%= form.label :password %>
+                <%= form.password_field :password, placeholder: "six characters with one number" %>
+            </div>
+            <div class='mx-2'>
+                <%= form.label :password_confirmation %>
+                <%= form.password_field :password_confirmation, placeholder: "Must match" %>
+            </div>
+            <button class='mx-2 rounded-xl bg-amber-600 text-amber-200 px-2 hover:bg-amber-200 hover:text-amber-600 pointer-events-auto'>
+                <%= form.submit %>
+            </button>
+        </div>
+    <% end %>
+</div>
