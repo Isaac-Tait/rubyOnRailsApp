@@ -9,7 +9,7 @@ class RegistrationsController < ApplicationController
             session[:user_id] = @user.id
             redirect_to root_path, notice: "Thank you for signing up!"
         else
-            render :new
+            render :new, status: :unprocessable_entity
         end
     end
 
