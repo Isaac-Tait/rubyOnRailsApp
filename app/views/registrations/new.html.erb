@@ -1,31 +1,31 @@
-<h1 class='font-semibold text-2xl'>Sign Up</h1>
+<h1>Sign Up</h1>
     <%= form_with model: @user, url: sign_up_path, local: true do |form| %>
 
         <% if @user.errors.any? %>
-            <div class='bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-4'>
+            <div>
                 <%= @user.errors.full_messages.each do |message| %>
                     <div><%= message %></div>
                 <% end %>
             </div>
         <% end %>
 
-        <div class='flex flex-col'>
-            <div class='mx-2'>
+        <div>
+            <div>
                 <%= form.label :email %>
                 <%= form.text_field :email, placeholder: "youremailis@awesome.com" %>
             </div>
             
-            <div class='mx-2'>
+            <div>
                 <%= form.label :password %>
                 <%= form.password_field :password, placeholder: "six characters with one number" %>
             </div>
             
-            <div class='mx-2'>
+            <div>
                 <%= form.label :password_confirmation %>
                 <%= form.password_field :password_confirmation, placeholder: "Must match" %>
             </div>
             
-            <button class='mx-2 rounded-xl bg-amber-600 text-amber-200 px-2 hover:bg-amber-200 hover:text-amber-600 pointer-events-auto'>
+            <button>
                 <%= form.submit %>
             </button>
         </div>
