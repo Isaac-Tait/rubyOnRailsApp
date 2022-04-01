@@ -9,24 +9,22 @@
             </div>
         <% end %>
 
-        <div>
-            <div>
+            <div class="mb-2">
                 <%= form.label :email %>
-                <%= form.text_field :email, placeholder: "youremailis@awesome.com" %>
+                <%= form.text_field :email, class: "form-control", placeholder: "youremailis@awesome.com" %>
             </div>
             
-            <div>
+            <div class="mb-2">
                 <%= form.label :password %>
-                <%= form.password_field :password, placeholder: "six characters with one number" %>
+                <%= form.password_field :password, class: "form-control", placeholder: "six characters with one number" %>
             </div>
             
-            <div>
+            <div class="mb-2">
                 <%= form.label :password_confirmation %>
-                <%= form.password_field :password_confirmation, placeholder: "Must match" %>
+                <%= form.password_field :password_confirmation, class: "form-control", placeholder: "Must match" %>
             </div>
             
-            <button>
-                <%= form.submit %>
-            </button>
-        </div>
+            <div class="mb-2">
+                <%= form.submit "Sign Up" %>
+            </div>
     <% end %>

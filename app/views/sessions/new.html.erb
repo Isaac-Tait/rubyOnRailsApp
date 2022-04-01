@@ -2,6 +2,18 @@
     <h1>Sign In</h1>
 
     <%= form_with url: sign_in_path, local: true do |form| %>
-        
+        <div class="mb-2">
+                <%= form.label :email %>
+                <%= form.text_field :email, class: "form-control", placeholder: "youremailis@awesome.com" %>
+            </div>
+            
+            <div class="mb-2">
+                <%= form.label :password %>
+                <%= form.password_field :password, class: "form-control", placeholder: "six characters with one number" %>
+            </div>
+            
+            <button class="mb-3">
+                <%= form.submit "Sign In" %>
+            </button>
     <% end %>
 </div>
